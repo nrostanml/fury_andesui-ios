@@ -29,9 +29,11 @@ mobile-cd
 # Bundler
 .bundle
 vendor/
+Gemfile.lock
 
 # CocoaPods
 Pods/
+Podfile.lock
 
 coverage/
 screenshots/*
