@@ -8,8 +8,17 @@
 
 import Foundation
 
-class TagsRouter: HomeRouterProtocol {
+protocol TagsRouter: NSObject {
+    func route(from: UIViewController)
+}
+
+class TagsAppRouter: NSObject {
+    var view: AndesTagShowcaseViewController!
+}
+
+extension TagsAppRouter: TagsRouter {
     func route(from: UIViewController) {
-        from.navigationController?.pushViewController(AndesTagShowcaseViewController(), animated: true)
+        view = AndesTagShowcaseViewController()
+        from.navigationController?.pushViewController(view, animated: true)
     }
 }

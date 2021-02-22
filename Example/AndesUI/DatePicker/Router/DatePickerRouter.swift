@@ -8,8 +8,17 @@
 
 import Foundation
 
-class DatePickerRouter: HomeRouterProtocol {
+protocol DatePickerRouter: NSObject {
+    func route(from: UIViewController)
+}
+
+class DatePickerAppRouter: NSObject {
+    var view: DatePickerViewController!
+}
+
+extension DatePickerAppRouter: DatePickerRouter {
     func route(from: UIViewController) {
-        from.navigationController?.pushViewController(DatePickerViewController(), animated: true)
+        view = DatePickerViewController()
+        from.navigationController?.pushViewController(view, animated: true)
     }
 }

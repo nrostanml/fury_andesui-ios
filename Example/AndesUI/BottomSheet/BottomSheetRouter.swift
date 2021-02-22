@@ -1,5 +1,5 @@
 //
-//  BottomSheetRouter.swift
+//  BottomSheetAppRouter.swift
 //  AndesUI-demoapp
 //
 //  Created by Tomi De Lucca on 29/10/2020.
@@ -8,10 +8,18 @@
 
 import UIKit
 
-class BottomSheetRouter: HomeRouterProtocol {
+protocol BottomSheetRouter: NSObject {
+    func route(from: UIViewController)
+}
+
+class BottomSheetAppRouter: NSObject {
+    var view: AndesShowcasePageViewController!
+}
+
+extension BottomSheetAppRouter: BottomSheetRouter {
     func route(from: UIViewController) {
-        let viewController = AndesShowcasePageViewController(controllers: [BottomSheetSwiftExampleViewController(), BottomSheetObjectiveCExampleViewController()])
-        viewController.title = "Bottom Sheet"
-        from.navigationController?.pushViewController(viewController, animated: true)
+        view = AndesShowcasePageViewController(controllers: [BottomSheetSwiftExampleViewController(), BottomSheetObjectiveCExampleViewController()])
+        view.title = "Bottom Sheet"
+        from.navigationController?.pushViewController(view, animated: true)
     }
 }

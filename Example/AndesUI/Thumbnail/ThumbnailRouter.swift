@@ -8,10 +8,19 @@
 
 import Foundation
 
-class ThumbnailRouter: HomeRouterProtocol {
-    func route(from: UIViewController) {
-        let viewController = AndesShowcasePageViewController(controllers: [ThumbnailViewController(), ThumbnailObjCViewController()])
-        viewController.title = "AndesThumbnail"
-        from.navigationController?.pushViewController(viewController, animated: true)
-    }
+protocol ThumbnailRouter: NSObject {
+	func route(from: UIViewController)
+}
+
+class ThumbnailAppRouter: NSObject {
+	var view: AndesShowcasePageViewController!
+}
+
+extension ThumbnailAppRouter: ThumbnailRouter {
+	func route(from: UIViewController) {
+		view = AndesShowcasePageViewController(controllers: [ThumbnailViewController(), ThumbnailObjCViewController()])
+		view.title = "AndesThumbnail"
+		from.navigationController?.pushViewController(view, animated: true)
+	}
+
 }

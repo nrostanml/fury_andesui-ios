@@ -16,7 +16,7 @@ protocol HomeView: NSObject {
 
 class HomeViewController: UIViewController {
 
-    private let presenter: HomePresenter
+    weak var presenter: HomePresenter!
     @IBOutlet weak var progressIndicatorBtn: AndesButton!
     @IBOutlet weak var coachmarkBtn: AndesButton!
     @IBOutlet weak var button: AndesButton!
@@ -32,18 +32,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cardBtn: AndesButton!
     @IBOutlet weak var specsButton: AndesButton!
     @IBOutlet weak var contributingButton: AndesButton!
-    @IBOutlet weak var thumbnailBtn: AndesButton!
-    @IBOutlet weak var showcaseLabel: UILabel!
+	@IBOutlet weak var thumbnailBtn: AndesButton!
 
-    init() {
-        self.presenter = HomePresenter()
-        super.init(nibName: nil, bundle: nil)
-        self.presenter.viewController = self
-    }
+	@IBOutlet weak var showcaseLabel: UILabel!
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         if let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String {
@@ -62,7 +54,7 @@ class HomeViewController: UIViewController {
             welcomeMessage.title = "home.welcomeMsg.title".localized
             welcomeMessage.body = "home.welcomeMsg.desc".localized
             welcomeMessage.setPrimaryAction("home.welcomeMsg.action".localized, handler: { _ in
-                self.presenter.present(view: .whatsNew)
+                self.presenter.presentWhatsNew()
             })
         }
 
@@ -77,84 +69,90 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func goToCoachmarkWasTapped(_ sender: Any) {
-        presenter.present(view: .coachmark)
+        presenter.presentCoachmark()
     }
 
     @IBAction func goToButtonWasTapped(_ sender: Any) {
-        presenter.present(view: .buttons)
+        presenter.presentButtons()
     }
 
     @IBAction func goToMessagesTapped(_ sender: Any) {
-        presenter.present(view: .messages)
+        presenter.presentMessages()
     }
 
     @IBAction func goToBadgesTapped(_ sender: Any) {
-        presenter.present(view: .badges)
+        presenter.presentBadges()
     }
 
     @IBAction func goToCheckboxTapped(_ sender: Any) {
-        presenter.present(view: .checkBox)
+        presenter.presentCheckbox()
     }
 
     @IBAction func goToRadioButtonTapped(_ sender: Any) {
-        presenter.present(view: .radioButton)
+        presenter.presentRadioButton()
     }
 
     @IBAction func goToDatePickerTapped(_ sender: Any) {
-        presenter.present(view: .datePicker)
+        presenter.presentDatePicker()
     }
 
     @IBAction func goToSpecsTapped(_ sender: Any) {
         guard let url = URL(string: "https://company-161429.frontify.com/d/kxHCRixezmfK/n-a") else { return }
         UIApplication.shared.open(url)
+
     }
 
     @IBAction func goToContributingTapped(_ sender: Any) {
         guard let url = URL(string: "https://meli.workplace.com/notes/andes-ui/c%C3%B3mo-contribuir-en-andes-ui/2559399620854933") else { return }
         UIApplication.shared.open(url)
+
     }
 
     @IBAction func progressIndicatorBtnTapped(_ sender: Any) {
-        presenter.present(view: .progressIndicator)
+        presenter.presentProgressIndicator()
     }
 
     @IBAction func textfieldBtnTapped(_ sender: Any) {
-        presenter.present(view: .textField)
+        presenter.presentTextField()
     }
 
     @IBAction func tagBtnTapped(_ sender: Any) {
-        presenter.present(view: .tag)
+        presenter.presentTags()
     }
 
     @IBAction func snackbarBtnTapped(_ sender: Any) {
-        presenter.present(view: .snackbar)
+        presenter.presentSnackbar()
     }
 
     @IBAction func cardBtnTapped(_ sender: Any) {
-        presenter.present(view: .card)
+        presenter.presentCard()
     }
 
     @IBAction func goToThumbnailTapped(_ sender: Any) {
-        presenter.present(view: .thumbnail)
+        presenter.presentThumbnail()
     }
 
     @IBAction func goToListViewTapped(_ sender: Any) {
-        presenter.present(view: .list)
+        presenter.presentList()
     }
 
     @IBAction func goToTextFieldsCodeTapped(_ sender: Any) {
-        presenter.present(view: .textFieldsCode)
+        presenter.presentTextFieldsCode()
     }
 
     @IBAction func bottomSheetTapped(_ sender: Any) {
-        presenter.present(view: .bottomSheet)
+        presenter.presentBottomSheet()
     }
 
     @IBAction func dropdownTapped(_ sender: Any) {
-        presenter.present(view: .dropdown)
+        presenter.presentDropdown()
     }
 
     @IBAction func andesBadgeExtensionTapped(_ sender: Any) {
-        presenter.present(view: .badges)
+        presenter.presentAndesBadgeExtension()
     }
+}
+
+extension HomeViewController: HomeView {
+
 }

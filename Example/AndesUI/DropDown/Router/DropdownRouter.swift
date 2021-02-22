@@ -8,10 +8,18 @@
 
 import Foundation
 
-class DropdownRouter: HomeRouterProtocol {
+protocol DropdownRouter: NSObject {
+    func route(from: UIViewController)
+}
+
+class DropdownAppRouter: NSObject {
+    var view: AndesShowcasePageViewController!
+}
+
+extension DropdownAppRouter: DropdownRouter {
     func route(from: UIViewController) {
-        let viewController = AndesShowcasePageViewController(controllers: [DropdownViewController(), DropDownObjcViewController()])
-        viewController.title = "AndesDropdown"
-        from.navigationController?.pushViewController(viewController, animated: true)
+        view = AndesShowcasePageViewController(controllers: [DropdownViewController(), DropDownObjcViewController()])
+        view.title = "AndesDropdown"
+        from.navigationController?.pushViewController(view, animated: true)
     }
 }

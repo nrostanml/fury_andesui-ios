@@ -6,10 +6,19 @@
 //  Copyright © 2020 MercadoLibre. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class CheckboxRouter: HomeRouterProtocol {
+protocol CheckboxRouter: NSObject {
+    func route(from: UIViewController)
+}
+
+class CheckboxAppRouter: NSObject {
+    var view: AndesCheckboxShowcaseViewController!
+}
+
+extension CheckboxAppRouter: CheckboxRouter {
     func route(from: UIViewController) {
-        from.navigationController?.pushViewController(AndesCheckboxShowcaseViewController(), animated: true)
+        view = AndesCheckboxShowcaseViewController()
+        from.navigationController?.pushViewController(view, animated: true)
     }
 }
