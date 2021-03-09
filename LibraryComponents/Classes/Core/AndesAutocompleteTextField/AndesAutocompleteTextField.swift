@@ -25,15 +25,27 @@ public class AndesAutoCompleteTextField: AndesTextField {
 
     // MARK: - Private Properties
 
+    private let tableViewShadow: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.shadowRadius = 5
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowOffset = .zero
+        view.layer.shouldRasterize = true
+        view.layer.shadowColor = UIColor.black.cgColor
+        return view
+    }()
+
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.isScrollEnabled = true
-        tableView.indicatorStyle = .black
-        tableView.showsVerticalScrollIndicator = true
         tableView.separatorStyle = .none
-        tableView.alwaysBounceVertical = false
+        tableView.indicatorStyle = .black
         tableView.layer.masksToBounds = true
+        tableView.alwaysBounceVertical = false
+        tableView.showsVerticalScrollIndicator = true
         tableView.rowHeight = UITableView.automaticDimension
+
         tableView.register(AndesAutocompleteSuggestionCell.self,
                            forCellReuseIdentifier: AndesAutocompleteSuggestionCell.identifier)
         return tableView
@@ -70,7 +82,7 @@ public class AndesAutoCompleteTextField: AndesTextField {
 
     override open func willMove(toWindow newWindow: UIWindow?) {
         super.willMove(toWindow: newWindow)
-        tableView.removeFromSuperview()
+        executeForViews { $0.removeFromSuperview() }
     }
 
     override open func layoutSubviews() {
@@ -82,7 +94,7 @@ public class AndesAutoCompleteTextField: AndesTextField {
 
     override func didEndEditing(text: String) {
         super.didEndEditing(text: text)
-        tableView.isHidden = true
+        showViews()
     }
 
     override func didChange() {
@@ -90,7 +102,7 @@ public class AndesAutoCompleteTextField: AndesTextField {
 
         filter()
         updateTableView()
-        tableView.isHidden = false
+        hideViews()
     }
 
     // MARK: - Private Methods
@@ -110,30 +122,46 @@ public class AndesAutoCompleteTextField: AndesTextField {
 
         tableView.reloadData()
     }
+
+    private func hideViews() {
+        executeForViews { $0.isHidden = false }
+    }
+
+    private func showViews() {
+        executeForViews { $0.isHidden = true }
+    }
+
+    private func executeForViews(completionBlock: (UIView) -> Void) {
+        [tableViewShadow, tableView].forEach { completionBlock($0) }
+    }
 }
 
 extension AndesAutoCompleteTextField: UITableViewDelegate, UITableViewDataSource {
     func buildTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        window?.addSubview(tableView)
+
+        executeForViews {
+            $0.layer.cornerRadius = 5
+            window?.addSubview($0)
+        }
+
         updateTableView()
     }
 
     func updateTableView() {
-        superview?.bringSubviewToFront(tableView)
-
-        // Set tableView frame
+        executeForViews { superview?.bringSubviewToFront($0) }
 
         let tableHeight: CGFloat = tableView.contentSize.height < 150 ? tableView.contentSize.height : 150
 
-        var tableViewFrame = CGRect(x: 0, y: -20, width: frame.size.width - 4, height: tableHeight)
+        var tableViewFrame = CGRect(x: 0, y: -15, width: frame.size.width - 4, height: tableHeight)
         tableViewFrame.origin = self.convert(tableViewFrame.origin, to: nil)
         tableViewFrame.origin.x += 2
         tableViewFrame.origin.y += frame.size.height
 
         UIView.animate(withDuration: 0.2) { [weak self] in
-            self?.tableView.frame = tableViewFrame
+            self?.executeForViews { $0.frame = tableViewFrame }
+            self?.layoutIfNeeded()
         }
 
         if isFirstResponder {
@@ -143,15 +171,14 @@ extension AndesAutoCompleteTextField: UITableViewDelegate, UITableViewDataSource
         tableView.reloadData()
     }
 
-    // MARK: TableViewDataSource methods
+    // MARK: TableViewDataSource Methods
 
     public func numberOfSections(in tableView: UITableView) -> Int { 1 }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { resultsList.count }
 
-    // MARK: TableViewDelegate methods
+    // MARK: TableViewDelegate Methods
 
-    // Adding rows in the tableview with the data from suggestions
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AndesAutocompleteSuggestionCell.identifier,
                                                  for: indexPath) as! AndesAutocompleteSuggestionCell
@@ -163,8 +190,8 @@ extension AndesAutoCompleteTextField: UITableViewDelegate, UITableViewDataSource
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.text = suggestions[indexPath.row].title
-        tableView.isHidden = true
+        text = suggestions[indexPath.row].title
+        showViews()
         endEditing(true)
         myDelegate?.suggestionSelected(suggestions[indexPath.row])
     }
