@@ -1,5 +1,5 @@
 //
-//  AutocompleteSuggestionCell.swift
+//  AndesAutocompleteSuggestionCell.swift
 //  AndesUI
 //
 //  Created by Ariel Goldfryd on 09/03/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AutocompleteSuggestionCell: UITableViewCell {
+class AndesAutocompleteSuggestionCell: UITableViewCell {
 
     // MARK: - UI Properties
 
@@ -27,7 +27,7 @@ class AutocompleteSuggestionCell: UITableViewCell {
 
     // MARK: - Public Properties
 
-    public static let identifier = String(describing: AutocompleteSuggestionCell.self)
+    public static let identifier = String(describing: AndesAutocompleteSuggestionCell.self)
 
     // MARK: - Private Properties
 
