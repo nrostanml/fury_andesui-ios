@@ -218,13 +218,13 @@ extension AndesTextField: AndesTextFieldViewDelegate {
         delegate?.andesTextFieldDidBeginEditing?(self)
     }
 
-    func didEndEditing(text: String) {
+    @objc func didEndEditing(text: String) {
         isEditing = false
         updateContentView()
         delegate?.andesTextFieldDidEndEditing?(self)
     }
 
-    func didChange() {
+    @objc func didChange() {
         delegate?.andesTextFieldDidChange?(self)
     }
 
