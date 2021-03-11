@@ -12,11 +12,13 @@ public protocol AndesAutocompleteTextFieldDelegate: AndesTextFieldDelegate {
 }
 
 public class Suggestion {
-    var title: String = ""
-    var detail: String = ""
+    public var title: String = ""
+    public var text: String = ""
+    public var detail: String = ""
 
-    public init(title: String, detail: String) {
+    public init(title: String, text: String? = nil, detail: String) {
         self.title = title
+        self.text = text ?? title
         self.detail = detail
     }
 }
@@ -61,11 +63,18 @@ public class AndesAutoCompleteTextField: AndesTextField {
         }
     }
 
-    public weak var myDelegate: AndesAutocompleteTextFieldDelegate? {
+    weak var _delegate: AndesAutocompleteTextFieldDelegate?
+
+    public override var delegate: AndesTextFieldDelegate? {
         didSet {
-            super.delegate = myDelegate
+            if delegate is AndesAutocompleteTextFieldDelegate {
+                super.delegate = delegate
+                self._delegate = delegate as? AndesAutocompleteTextFieldDelegate
+            }
         }
     }
+
+    public var showBoldTitle: Bool = false
 
     // MARK: - Initializers
 
@@ -186,13 +195,15 @@ extension AndesAutoCompleteTextField: UITableViewDelegate, UITableViewDataSource
         cell.titleLabel.text = resultsList[indexPath.row].title
         cell.detailLabel.text = resultsList[indexPath.row].detail
 
+        cell.shouldBoldTitle(showBoldTitle)
+
         return cell
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        text = suggestions[indexPath.row].title
+        text = suggestions[indexPath.row].text
         showViews()
         endEditing(true)
-        myDelegate?.suggestionSelected(suggestions[indexPath.row])
+        _delegate?.suggestionSelected(suggestions[indexPath.row])
     }
 }
