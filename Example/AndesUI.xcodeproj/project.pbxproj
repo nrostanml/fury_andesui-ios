@@ -128,12 +128,27 @@
 		CEA2960925128CAB00FB625F /* TextFieldsCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2960825128CAB00FB625F /* TextFieldsCodeViewController.swift */; };
 		CEA2960B25128DF900FB625F /* TextFieldsCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA2960A25128DF900FB625F /* TextFieldsCodeViewController.xib */; };
 		CEB95878252BC8CD00C74F01 /* AndesTextFieldCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB95876252BC7B000C74F01 /* AndesTextFieldCodeTests.swift */; };
+		E201BF4825BB508E00D48937 /* TooltipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201BF4625BB508E00D48937 /* TooltipViewController.swift */; };
+		E201BF4925BB508E00D48937 /* TooltipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E201BF4725BB508E00D48937 /* TooltipViewController.xib */; };
+		E201BF5025BB50C100D48937 /* TooltipRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201BF4F25BB50C100D48937 /* TooltipRouter.swift */; };
+		E212FF9C25D44C3300F2AEE0 /* TooltipActionUseCase.xib in Resources */ = {isa = PBXBuildFile; fileRef = E212FF9B25D44C3300F2AEE0 /* TooltipActionUseCase.xib */; };
+		E212FFA125D44C4200F2AEE0 /* TooltipActionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E212FFA025D44C4200F2AEE0 /* TooltipActionUseCase.swift */; };
+		E212FFB025D487B700F2AEE0 /* TooltipActionLightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E212FFAF25D487B400F2AEE0 /* TooltipActionLightUseCase.swift */; };
 		E230FDC12580F71800D6ED78 /* ProgressIndicatorObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E230FDBF2580F71800D6ED78 /* ProgressIndicatorObjcViewController.m */; };
 		E230FDC22580F71800D6ED78 /* ProgressIndicatorObjcViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E230FDC02580F71800D6ED78 /* ProgressIndicatorObjcViewController.xib */; };
+		E2661E7025DEFFA80050D375 /* DropDownProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2661E6F25DEFFA80050D375 /* DropDownProxy.swift */; };
+		E2773F0725D5B4190081E891 /* TooltipDataShowCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2773F0625D5B4190081E891 /* TooltipDataShowCase.swift */; };
+		E2773F0C25D6112E0081E891 /* TooltipActionDarkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2773F0B25D6112E0081E891 /* TooltipActionDarkUseCase.swift */; };
+		E2773F1125D611580081E891 /* TooltipUseCaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2773F1025D611580081E891 /* TooltipUseCaseProtocols.swift */; };
+		E2773F1625D6136F0081E891 /* TooltipActionHighlightCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2773F1525D6136F0081E891 /* TooltipActionHighlightCase.swift */; };
+		E2847EB725DC98A800D3174D /* AndesTooltipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2847EB625DC98A700D3174D /* AndesTooltipTests.swift */; };
 		E2C0157A2575D237001B89C3 /* ProgressIndicatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C015792575D237001B89C3 /* ProgressIndicatorRouter.swift */; };
 		E2C0157E2575D467001B89C3 /* ProgressIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C0157C2575D467001B89C3 /* ProgressIndicatorViewController.swift */; };
 		E2C0157F2575D467001B89C3 /* ProgressIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C0157D2575D467001B89C3 /* ProgressIndicatorViewController.xib */; };
 		E2C015BD2579991E001B89C3 /* AndesProgressIndicatorIndeterminateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C015BC2579991D001B89C3 /* AndesProgressIndicatorIndeterminateTest.swift */; };
+		E2CA668325E5348200D3B0F0 /* TooltipObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CA668125E5348200D3B0F0 /* TooltipObjcViewController.m */; };
+		E2CA668425E5348200D3B0F0 /* TooltipObjcViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CA668225E5348200D3B0F0 /* TooltipObjcViewController.xib */; };
+		E2FB3C3325E03B60003F9A18 /* TooltipFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB3C3225E03B60003F9A18 /* TooltipFactory.swift */; };
 		E615508A23D619E300417B5F /* AndesButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615508823D6196C00417B5F /* AndesButtonTests.swift */; };
 		E662DEB1254B300900A86D10 /* BottomSheetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E662DEB0254B300900A86D10 /* BottomSheetRouter.swift */; };
 		E662DEB3254B305100A86D10 /* BottomSheetSwiftExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E662DEB2254B305100A86D10 /* BottomSheetSwiftExampleViewController.swift */; };
@@ -338,13 +353,29 @@
 		CEA2960A25128DF900FB625F /* TextFieldsCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldsCodeViewController.xib; sourceTree = "<group>"; };
 		CEB95876252BC7B000C74F01 /* AndesTextFieldCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesTextFieldCodeTests.swift; sourceTree = "<group>"; };
 		D91DB4D401500717C545A996 /* Pods_AndesUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndesUI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E201BF4625BB508E00D48937 /* TooltipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipViewController.swift; sourceTree = "<group>"; };
+		E201BF4725BB508E00D48937 /* TooltipViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TooltipViewController.xib; sourceTree = "<group>"; };
+		E201BF4F25BB50C100D48937 /* TooltipRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipRouter.swift; sourceTree = "<group>"; };
+		E212FF9B25D44C3300F2AEE0 /* TooltipActionUseCase.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TooltipActionUseCase.xib; sourceTree = "<group>"; };
+		E212FFA025D44C4200F2AEE0 /* TooltipActionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipActionUseCase.swift; sourceTree = "<group>"; };
+		E212FFAF25D487B400F2AEE0 /* TooltipActionLightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipActionLightUseCase.swift; sourceTree = "<group>"; };
 		E230FDBE2580F71800D6ED78 /* ProgressIndicatorObjcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressIndicatorObjcViewController.h; sourceTree = "<group>"; };
 		E230FDBF2580F71800D6ED78 /* ProgressIndicatorObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressIndicatorObjcViewController.m; sourceTree = "<group>"; };
 		E230FDC02580F71800D6ED78 /* ProgressIndicatorObjcViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressIndicatorObjcViewController.xib; sourceTree = "<group>"; };
+		E2661E6F25DEFFA80050D375 /* DropDownProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownProxy.swift; sourceTree = "<group>"; };
+		E2773F0625D5B4190081E891 /* TooltipDataShowCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipDataShowCase.swift; sourceTree = "<group>"; };
+		E2773F0B25D6112E0081E891 /* TooltipActionDarkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipActionDarkUseCase.swift; sourceTree = "<group>"; };
+		E2773F1025D611580081E891 /* TooltipUseCaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipUseCaseProtocols.swift; sourceTree = "<group>"; };
+		E2773F1525D6136F0081E891 /* TooltipActionHighlightCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipActionHighlightCase.swift; sourceTree = "<group>"; };
+		E2847EB625DC98A700D3174D /* AndesTooltipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesTooltipTests.swift; sourceTree = "<group>"; };
 		E2C015792575D237001B89C3 /* ProgressIndicatorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorRouter.swift; sourceTree = "<group>"; };
 		E2C0157C2575D467001B89C3 /* ProgressIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorViewController.swift; sourceTree = "<group>"; };
 		E2C0157D2575D467001B89C3 /* ProgressIndicatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressIndicatorViewController.xib; sourceTree = "<group>"; };
 		E2C015BC2579991D001B89C3 /* AndesProgressIndicatorIndeterminateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndesProgressIndicatorIndeterminateTest.swift; sourceTree = "<group>"; };
+		E2CA668025E5348200D3B0F0 /* TooltipObjcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TooltipObjcViewController.h; sourceTree = "<group>"; };
+		E2CA668125E5348200D3B0F0 /* TooltipObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TooltipObjcViewController.m; sourceTree = "<group>"; };
+		E2CA668225E5348200D3B0F0 /* TooltipObjcViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TooltipObjcViewController.xib; sourceTree = "<group>"; };
+		E2FB3C3225E03B60003F9A18 /* TooltipFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TooltipFactory.swift; path = AndesUI/Tooltip/Views/UseCases/cases/TooltipFactory.swift; sourceTree = SOURCE_ROOT; };
 		E3E9B26B74F98D6773C98C88 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E615508823D6196C00417B5F /* AndesButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AndesButtonTests.swift; sourceTree = "<group>"; };
 		E61E8ED6239E9A7A00F85A8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -531,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				BADFA67E25CB431300165DFE /* UITabBarItem+AndesBadgeExtension */,
+				E201BF4525BB507000D48937 /* Tooltip */,
 				E2C015772575D218001B89C3 /* ProgressIndicator */,
 				9C9B5A7F23ECADA60007234B /* Additions */,
 				6A22DCBC23C918EA00BBFEA0 /* AndesUI-demoapp-Bridging-Header.h */,
@@ -599,6 +631,7 @@
 				9CE112ED23D103080017B770 /* AndesButtonTests.swift */,
 				E2C015BC2579991D001B89C3 /* AndesProgressIndicatorIndeterminateTest.swift */,
 				BADFA56525CB2EEF00165DFE /* UITabBarItem+AndesBadgeExtension.swift */,
+				E2847EB625DC98A700D3174D /* AndesTooltipTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1025,6 +1058,76 @@
 			name = TextFieldsCodeTests;
 			sourceTree = "<group>";
 		};
+		E201BF4525BB507000D48937 /* Tooltip */ = {
+			isa = PBXGroup;
+			children = (
+				E201BF4E25BB50A500D48937 /* Router */,
+				E201BF4D25BB509900D48937 /* Views */,
+			);
+			path = Tooltip;
+			sourceTree = "<group>";
+		};
+		E201BF4D25BB509900D48937 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E212FF9A25D4473500F2AEE0 /* UseCases */,
+				E201BF4625BB508E00D48937 /* TooltipViewController.swift */,
+				E201BF4725BB508E00D48937 /* TooltipViewController.xib */,
+				E2CA668025E5348200D3B0F0 /* TooltipObjcViewController.h */,
+				E2CA668125E5348200D3B0F0 /* TooltipObjcViewController.m */,
+				E2CA668225E5348200D3B0F0 /* TooltipObjcViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E201BF4E25BB50A500D48937 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E201BF4F25BB50C100D48937 /* TooltipRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E212FF9A25D4473500F2AEE0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E2773F0225D5B3FE0081E891 /* Model */,
+				E212FFBA25D48C7000F2AEE0 /* Cases */,
+				E212FFB925D48C6800F2AEE0 /* Views */,
+				E2661E6F25DEFFA80050D375 /* DropDownProxy.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E212FFB925D48C6800F2AEE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E212FF9B25D44C3300F2AEE0 /* TooltipActionUseCase.xib */,
+				E212FFA025D44C4200F2AEE0 /* TooltipActionUseCase.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E212FFBA25D48C7000F2AEE0 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				E212FFAF25D487B400F2AEE0 /* TooltipActionLightUseCase.swift */,
+				E2773F0B25D6112E0081E891 /* TooltipActionDarkUseCase.swift */,
+				E2773F1525D6136F0081E891 /* TooltipActionHighlightCase.swift */,
+				E2FB3C3225E03B60003F9A18 /* TooltipFactory.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		E2773F0225D5B3FE0081E891 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2773F0625D5B4190081E891 /* TooltipDataShowCase.swift */,
+				E2773F1025D611580081E891 /* TooltipUseCaseProtocols.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E2C015772575D218001B89C3 /* ProgressIndicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1328,6 +1431,7 @@
 				F8249D0A24ABCAC8002A6456 /* AndesRadioButtonViewController.xib in Resources */,
 				F0AC4E51255EE400003B364C /* DropdownViewController.xib in Resources */,
 				8634C9E924AB774700DB7B9F /* SnackbarObjCViewController.xib in Resources */,
+				E212FF9C25D44C3300F2AEE0 /* TooltipActionUseCase.xib in Resources */,
 				9C2FFC6B23EDB1A50016292E /* whats_new.html in Resources */,
 				F830F8872494127C0043D5AF /* AndesCheckboxViewController.xib in Resources */,
 				9C9B5A8823ECB08D0007234B /* Localizable.strings in Resources */,
@@ -1335,6 +1439,8 @@
 				8617BD202499B6570071319C /* SnackbarViewController.xib in Resources */,
 				F85E052024AF69B20059C6FA /* RadioButtonObjCViewController.xib in Resources */,
 				023ADCE824ACD1570076C3F3 /* ThumbnailViewController.xib in Resources */,
+				E201BF4925BB508E00D48937 /* TooltipViewController.xib in Resources */,
+				E2CA668425E5348200D3B0F0 /* TooltipObjcViewController.xib in Resources */,
 				9CE112FD23D20B0E0017B770 /* MessageObjCViewController.xib in Resources */,
 				86A1E30924815A1700B59D1D /* AndesTagShowcaseViewController.xib in Resources */,
 				86A1E3122481E56300B59D1D /* TagObjCViewController.xib in Resources */,
@@ -1456,7 +1562,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D2152E9241BCC65001CEA8D /* TextFieldsRouter.swift in Sources */,
+				E2773F1625D6136F0081E891 /* TooltipActionHighlightCase.swift in Sources */,
 				F899354524A0EC7B004BC82D /* CheckboxObjCViewController.m in Sources */,
+				E2CA668325E5348200D3B0F0 /* TooltipObjcViewController.m in Sources */,
 				0323A414256085A2001A480F /* DatePickerViewController.swift in Sources */,
 				F0AC4E47255EE312003B364C /* DropdownRouter.swift in Sources */,
 				6D2152EC241BCD0E001CEA8D /* AndesShowcasePageViewController.swift in Sources */,
@@ -1474,6 +1582,7 @@
 				E662DEB3254B305100A86D10 /* BottomSheetSwiftExampleViewController.swift in Sources */,
 				F8249D0824ABCA4E002A6456 /* AndesRadioButtonViewController.swift in Sources */,
 				6A3C9CFA23C692B6007D0C8B /* HomeRouter.swift in Sources */,
+				E2773F0C25D6112E0081E891 /* TooltipActionDarkUseCase.swift in Sources */,
 				E662DECD2551B81100A86D10 /* BottomSheetExampleScrollableContentViewController.swift in Sources */,
 				9CE112DB23CE587B0017B770 /* MessageViewController.swift in Sources */,
 				9C9B5A8F23ECEED40007234B /* WhatsNewViewController.swift in Sources */,
@@ -1481,12 +1590,14 @@
 				86A1E3112481E56300B59D1D /* TagObjCViewController.m in Sources */,
 				90530B07242BF9ED005E056A /* BadgesRouter.swift in Sources */,
 				8617BD1F2499B6570071319C /* SnackbarViewController.swift in Sources */,
+				E212FFB025D487B700F2AEE0 /* TooltipActionLightUseCase.swift in Sources */,
 				023ADCEC24ACD4050076C3F3 /* ThumbnailObjCViewController.m in Sources */,
 				CE78E755252E2E9B00AF47F3 /* TextFieldsCodeObjCViewController.m in Sources */,
 				6A3C9CFD23C692B6007D0C8B /* HomeViewController.swift in Sources */,
 				F0AC4E50255EE400003B364C /* DropdownViewController.swift in Sources */,
 				80B22F1C24DC5C3700FE9197 /* CoachmarkViewController.swift in Sources */,
 				E2C0157E2575D467001B89C3 /* ProgressIndicatorViewController.swift in Sources */,
+				E2773F0725D5B4190081E891 /* TooltipDataShowCase.swift in Sources */,
 				F85E051E24AF68150059C6FA /* RadioButtonObjCViewController.m in Sources */,
 				90F4781F243534F0001CEC90 /* BadgeObjCViewController.m in Sources */,
 				8617BD172499B5860071319C /* SnackbarRouter.swift in Sources */,
@@ -1496,6 +1607,8 @@
 				E662DEB1254B300900A86D10 /* BottomSheetRouter.swift in Sources */,
 				F05BF6A9257551F600F325E0 /* DropDownObjcViewController.m in Sources */,
 				F830F883249400020043D5AF /* CheckboxRouter.swift in Sources */,
+				E2661E7025DEFFA80050D375 /* DropDownProxy.swift in Sources */,
+				E212FFA125D44C4200F2AEE0 /* TooltipActionUseCase.swift in Sources */,
 				86D656B5248FF79500E62C1E /* AndesDemoColor.swift in Sources */,
 				BADFA6A025CC81D900165DFE /* AndesBadgeExtensionViewControllerMock.swift in Sources */,
 				6D2152F3241C080C001CEA8D /* TextFieldObjCViewController.m in Sources */,
@@ -1507,11 +1620,14 @@
 				E2C0157A2575D237001B89C3 /* ProgressIndicatorRouter.swift in Sources */,
 				490589A524BE3CA70044FD0B /* CardViewController.swift in Sources */,
 				BADFA68F25CC567300165DFE /* AndesBadgeExtensionTabBarController.swift in Sources */,
+				E2773F1125D611580081E891 /* TooltipUseCaseProtocols.swift in Sources */,
 				490589A124BE3C440044FD0B /* CardRouter.swift in Sources */,
 				49BC925024C8BF72007A03D3 /* CardObjCViewController.m in Sources */,
 				9C9B5A8C23ECEEBE0007234B /* WhatsNewRouter.swift in Sources */,
 				023ADCE724ACD1560076C3F3 /* ThumbnailViewController.swift in Sources */,
 				6A22DCC023C918EA00BBFEA0 /* AndesUIViewController.m in Sources */,
+				E201BF4825BB508E00D48937 /* TooltipViewController.swift in Sources */,
+				E201BF5025BB50C100D48937 /* TooltipRouter.swift in Sources */,
 				F830F885249400760043D5AF /* AndesCheckboxViewController.swift in Sources */,
 				F09C4F0C2551BC99005621F8 /* ListRouter.swift in Sources */,
 				6A186A6823AC0FBB00420556 /* ButtonsRouter.swift in Sources */,
@@ -1520,6 +1636,7 @@
 				CEA2960725128C5000FB625F /* TextFieldsCodeRouter.swift in Sources */,
 				9C9B5A8123ECADB80007234B /* String+Additions.swift in Sources */,
 				03BE93FC256432C8004F3BBD /* DatePickerObjCViewController.m in Sources */,
+				E2FB3C3325E03B60003F9A18 /* TooltipFactory.swift in Sources */,
 				6D8774192523D0A800C74B83 /* TagChoiceObjCViewController.m in Sources */,
 				F8D7CB1A24A388D7003D5294 /* AndesCheckboxInitViewController.swift in Sources */,
 				E230FDC12580F71800D6ED78 /* ProgressIndicatorObjcViewController.m in Sources */,
@@ -1539,6 +1656,7 @@
 				80D6915924EC0E98002CF3BC /* AndesCoachmarkNavBarTests.swift in Sources */,
 				80D6914F24E438C2002CF3BC /* MockSwift.swift in Sources */,
 				0304F4D425C0B73300A6BA72 /* AndesDatePickerHeaderViewTests.swift in Sources */,
+				E2847EB725DC98A800D3174D /* AndesTooltipTests.swift in Sources */,
 				F85E052324AF79900059C6FA /* AndesRadioButtonTest.swift in Sources */,
 				80D6915124E449B0002CF3BC /* AndesCoachmarkViewMock.swift in Sources */,
 				9CAD81E923FD66ED00D43EB9 /* AndesIconsProviderTests.swift in Sources */,

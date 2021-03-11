@@ -32,6 +32,7 @@ enum TestappViews {
     case list
     case dropdown
     case andesBadgeExtensions
+    case tooltip
 }
 
 protocol HomeRouter: class {
@@ -87,6 +88,8 @@ class HomeAppRouter: HomeRouter {
             router = DropdownRouter()
         case .andesBadgeExtensions:
             router = AndesBadgeExtensionRouter()
+        case .tooltip:
+            router = TooltipRouter()
         }
         router.route(from: fromVC)
     }

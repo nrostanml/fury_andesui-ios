@@ -42,7 +42,9 @@ import Foundation
     var textColorNegative: UIColor { get }
     var textColorCaution: UIColor { get }
     var textColorPositive: UIColor { get }
-    var tetColorLink: UIColor { get }
+    @available(*, deprecated, renamed: "textColorLink")
+    @objc optional var tetColorLink: UIColor { get }
+    var textColorLink: UIColor { get }
     var textColorWhite: UIColor { get }
     var textColorWarning: UIColor { get }
 
@@ -50,6 +52,10 @@ import Foundation
     var feedbackColorCaution: UIColor { get }
     var feedbackColorPositive: UIColor { get }
     var feedbackColorWarning: UIColor { get }
+}
+
+public extension AndesColors {
+    var tetColorLink: UIColor { return self.textColorLink }
 }
 
 /**

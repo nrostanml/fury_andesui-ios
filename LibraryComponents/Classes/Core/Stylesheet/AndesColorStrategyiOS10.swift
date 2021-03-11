@@ -33,6 +33,7 @@ public class AndesColorStrategyiOS10: AndesColors {
     public var textColorCaution: UIColor = UIColor.Andes.orange500
     public var textColorPositive: UIColor = UIColor.Andes.green500
     public var tetColorLink: UIColor = UIColor.Andes.blueMP500
+    public var textColorLink: UIColor = UIColor.Andes.blueMP500
     public var textColorWhite: UIColor = UIColor.Andes.white
     public var textColorWarning: UIColor = UIColor.Andes.orange500
 

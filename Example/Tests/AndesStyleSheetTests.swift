@@ -61,6 +61,7 @@ class AndesStyleSheetTests: QuickSpec {
         equal = equal && styleSheetOne.bgColorSecondary.isEqual(styleSheetTwo.bgColorSecondary)
 
         equal = equal && styleSheetOne.tetColorLink.isEqual(styleSheetTwo.tetColorLink)
+        equal = equal && styleSheetOne.textColorLink.isEqual(styleSheetTwo.textColorLink)
         equal = equal && styleSheetOne.textColorCaution.isEqual(styleSheetTwo.textColorCaution)
         equal = equal && styleSheetOne.textColorWhite.isEqual(styleSheetTwo.textColorWhite)
         equal = equal && styleSheetOne.textColorPrimary.isEqual(styleSheetTwo.textColorPrimary)
@@ -139,6 +140,8 @@ class AndesStyleSheetWhiteMock: AndesStyleSheet {
 
     var tetColorLink: UIColor = .white
 
+    var textColorLink: UIColor = .white
+
     var textColorWhite: UIColor = .white
 
     var feedbackColorNegative: UIColor = .white
@@ -146,9 +149,9 @@ class AndesStyleSheetWhiteMock: AndesStyleSheet {
     var feedbackColorCaution: UIColor = .white
 
     var feedbackColorPositive: UIColor = .white
-    
+
     var feedbackColorWarning: UIColor = .white
-    
+
     var textColorWarning: UIColor = .white
 
     func titleXS(color: UIColor) -> AndesFontStyle {
@@ -208,9 +211,9 @@ class AndesStyleSheetWhiteMock: AndesStyleSheet {
 
 class AndesStyleSheetBlackMock: AndesStyleSheet {
     var textColorWarning: UIColor = .black
-    
+
     var feedbackColorWarning: UIColor = .black
-    
+
     var bgColorPrimary: UIColor = .black
 
     var bgColorSecondary: UIColor = .black
@@ -252,6 +255,8 @@ class AndesStyleSheetBlackMock: AndesStyleSheet {
     var textColorPositive: UIColor = .black
 
     var tetColorLink: UIColor = .black
+
+    var textColorLink: UIColor = .black
 
     var textColorWhite: UIColor = .black
 

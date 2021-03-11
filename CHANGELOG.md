@@ -1,4 +1,12 @@
-# Unpublished
+# 3.23.2
+### 🛠 Bug fixes
+- Optional color var | Authors [joalonspint](https://github.com/joalonsopint)
+
+# 3.23.0
+### 🛠 Bug fixes
+- Fix color name and color in colorset | Authors [joalonspint](https://github.com/joalonsopint)
+
+# 3.22.0
 ### ⚙️ Other
 - Lib & testapp updated config: | Authors [jbrunoAtMeli] (https://github.com/jbrunoAtMeli)
     The following recommended warnings were enabled

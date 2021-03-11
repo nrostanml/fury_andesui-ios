@@ -20,7 +20,7 @@ class AndesMessageAbstractView: UIView, AndesMessageView, UITextViewDelegate {
     @IBOutlet weak var titleToDismissConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleToSafeAreaConstraint: NSLayoutConstraint!
 
-    var config: AndesMessageViewConfig
+    private(set) var config: AndesMessageViewConfig
     init(withConfig config: AndesMessageViewConfig) {
         self.config = config
         super.init(frame: .zero)

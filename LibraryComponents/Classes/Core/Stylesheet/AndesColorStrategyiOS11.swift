@@ -33,6 +33,7 @@ public class AndesColorStrategyiOS11: AndesColors {
     public var textColorCaution: UIColor = UIColor(named: "andes-text-color-caution", in: AndesBundle.bundle(), compatibleWith: nil)!
     public var textColorPositive: UIColor = UIColor(named: "andes-text-color-positive", in: AndesBundle.bundle(), compatibleWith: nil)!
     public var tetColorLink: UIColor = UIColor(named: "andes-text-color-link", in: AndesBundle.bundle(), compatibleWith: nil)!
+    public var textColorLink: UIColor = UIColor(named: "andes-text-color-link", in: AndesBundle.bundle(), compatibleWith: nil)!
     public var textColorWhite: UIColor = UIColor(named: "andes-text-color-white", in: AndesBundle.bundle(), compatibleWith: nil)!
     public var textColorWarning: UIColor = UIColor(named: "andes-text-color-warning", in: AndesBundle.bundle(), compatibleWith: nil)!
 
