@@ -189,8 +189,9 @@ extension AndesAutoCompleteTextField: UITableViewDelegate, UITableViewDataSource
     // MARK: TableViewDelegate Methods
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AndesAutocompleteSuggestionCell.identifier,
-                                                 for: indexPath) as! AndesAutocompleteSuggestionCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AndesAutocompleteSuggestionCell.identifier,
+                                                 for: indexPath) as? AndesAutocompleteSuggestionCell
+        else { return UITableViewCell() }
 
         cell.titleLabel.text = resultsList[indexPath.row].title
         cell.detailLabel.text = resultsList[indexPath.row].detail
