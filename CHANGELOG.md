@@ -1,6 +1,8 @@
-# Unpublished
+# 4.0.0
+### 🚀 Features
+- Podspec change to Fury migration | [Julian Bruno](https://github.com/jbrunoAtMeli)
 ### 🛠 Bug fixes
-- Test app fix ProgressIndicatorRoute  andesBadgeExtensions| Authors [jbrunoAtMeli] (https://github.com/jbrunoAtMeli)
+- Test app fix ProgressIndicatorRoute  andesBadgeExtensions| Authors [jbrunoAtMeli](https://github.com/jbrunoAtMeli)
 
 # 3.24.0
 ### 🚀 Features

@@ -1,16 +1,16 @@
 PODS:
-  - AndesUI (3.23.2):
-    - AndesUI/Core (= 3.23.2)
-  - AndesUI/AndesBottomSheet (3.23.2):
+  - AndesUI (4.0.0):
+    - AndesUI/Core (= 4.0.0)
+  - AndesUI/AndesBottomSheet (4.0.0):
     - AndesUI/Core
-  - AndesUI/AndesCoachmark (3.23.2):
+  - AndesUI/AndesCoachmark (4.0.0):
     - AndesUI/Core
-  - AndesUI/AndesDropdown (3.23.2):
+  - AndesUI/AndesDropdown (4.0.0):
     - AndesUI/AndesBottomSheet
     - AndesUI/Core
-  - AndesUI/Core (3.23.2):
+  - AndesUI/Core (4.0.0):
     - AndesUI/LocalIcons
-  - AndesUI/LocalIcons (3.23.2)
+  - AndesUI/LocalIcons (4.0.0)
   - Firebase/Analytics (7.8.0):
     - Firebase/Core
   - Firebase/Core (7.8.0):
@@ -111,7 +111,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  AndesUI: ab43e6f9608142e7edf9f6c9158fe0b69974b8c0
+  AndesUI: 53631580f049aa7e1253b0f48b2f022f0230e234
   Firebase: 1e0d6610f21bdd131231525d7ee78f7f9e64e606
   FirebaseAnalytics: e70f7e0f1f178960a7d0b4ebec32e8c386245eda
   FirebaseCore: 049029df3096e5c118917029be7da75ee16f3b1b
